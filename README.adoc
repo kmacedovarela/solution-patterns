@@ -1,5 +1,9 @@
 == Red Hat Solution Patterns
 
+This is the home page that links to the more detailed guides of each solution pattern.
+
+=== How to run:
+
 For a live preview:
 
 1. Install gulp:
@@ -14,6 +18,6 @@ yarn add gulp
 npx gulp
 ```
 
-== How to build the tutorial
+=== How to build the tutorial
 
 Check the build courseware https://redhat-scholars.github.io/build-course[documentation]  on how folder structure, how to use macros and other gotchas
