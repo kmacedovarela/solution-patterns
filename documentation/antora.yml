@@ -1,5 +1,5 @@
-name: template-tutorial
-title: Template Tutorial
+name: solution-patterns
+title: Red Hat Solution Patterns
 version: master
 nav:
   - modules/ROOT/nav.adoc

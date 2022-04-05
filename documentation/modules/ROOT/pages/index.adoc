@@ -1,20 +1,32 @@
-= Welcome to Template Tutorial
+= Welcome to Red Hat Solutions Patterns for Cloud Native Applications
 :page-layout: home
 :!sectids:
 
 [.text-center.strong]
-== Publish Services to Kubernetes
+== Cloud native architectures done right
 
-A Kubernetes tutorial to show how you can deploy a Java service to a Kubernetes cluster as it was a child game.
+Learn about common scenarios faced by developers and architects, its challenges and proposed architectural solutions with Red Hat technologies. Here you can find solution for diverse set of use cases on cloud adoption and application modernization, including background story, reference architecture, technical implementation of the solution and much more.
 
-[.tiles.browse]
-== Browse modules
+[#whatis]
+== What is a solution pattern?
 
-[.tile]
-.xref:01-setup.adoc[Get Started]
-* xref:01-setup.adoc#minikube[Minikube]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-[.tile]
-.xref:02-deploy.adoc[Deploying]
-* xref:02-deploy.adoc#package[Package the Application]
-* xref:02-deploy.adoc#deploy[Deploy the Application]
+[#explore]
+== Explore
+
+It's time to boost your cloud-native application architectural design with bleeding-edge technology backed by open-source software. Explore the use cases and learn recommended solutions for each of these challenges:
+
+** xref:app-modernization.adoc[**Application Modernization**]
+
+* xref:app-modernization.adoc#cdc[Effective application modernization with change data capture]
+
+**Edge-to-Cloud Pipelines**
+
+* Gather and prepare data for AI/ML
+
+**Event driven architecture**c
+
+* Extend app modernization to bring agility, responsiveness and extensibility
+
+

@@ -1,0 +1,4 @@
+= Edge Solution Patterns
+
+[#pipelines]
+include::_edge-to-cloud_pipelines.adoc[]

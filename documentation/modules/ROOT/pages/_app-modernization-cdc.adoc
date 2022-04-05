@@ -1,0 +1,30 @@
+= Application modernization with change data capture
+include::_attributes.adoc[]
+
+[#why]
+== Why
+
+Eu lobortis elementum nibh tellus molestie nunc non blandit. Ut tristique et egestas quis ipsum suspendisse ultrices gravida dictum. Et ultrices neque ornare aenean euismod elementum nisi. Non quam lacus suspendisse faucibus interdum. Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus.
+
+[#usecase]
+=== Use case
+
+Amet est placerat in egestas. Porta nibh venenatis cras sed felis eget velit aliquet. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Ac auctor augue mauris augue neque gravida in fermentum et.
+
+[#tech-overview]
+== Modernizing legacy applications with Change Data Capture
+
+Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Ut faucibus pulvinar elementum integer enim neque volutpat. Lobortis mattis aliquam faucibus purus in. Vestibulum mattis ullamcorper velit sed ullamcorper. Risus pretium quam vulputate dignissim suspendisse. Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Sed lectus vestibulum mattis ullamcorper velit sed. Ipsum consequat nisl vel pretium. Sed risus pretium quam vulputate dignissim suspendisse in. Gravida arcu ac tortor dignissim convallis aenean. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus vel.
+
+[TIP]
+====
+**What is CDC?**
+
+Change data capture is a proven data integration pattern to track when and what changes occur in data then alert other systems and services that must respond to those changes. Change data capture helps maintain consistency and functionality across all systems that rely on data.
+
+Read more in the article https://www.redhat.com/en/topics/integration/what-is-change-data-capture[What is Change Data Capture?].
+====
+
+[#architecture]
+=== Architeture Description
+

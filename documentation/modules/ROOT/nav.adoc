@@ -1,7 +1,8 @@
-* xref:01-setup.adoc[1. Setup]
-** xref:01-setup.adoc#prerequisite[Prerequisites]
-** xref:01-setup.adoc#minikube[Setup Minikube]
+* xref:index.adoc[Home Page]
+* xref:app-modernization.adoc[Application Modernization Solution Patterns]
+** xref:app-modernization.adoc#cdc[Change Data Capture for Legacy Application Modernization]
+** ** xref:app-modernization.adoc#event-driven[Event Driven Architectures]
 
-* xref:02-deploy.adoc[2. Deploy Service]
-** xref:02-deploy.adoc#package[Build Service]
-** xref:02-deploy.adoc#deploy[Deploy Dervice]
+
+* xref:edge.adoc[Edge Solution Patterns]
+** xref:edge.adoc#pipelines[Edge-to-Cloud Pipelines]

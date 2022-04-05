@@ -1,0 +1,7 @@
+= Application Modernization
+
+[#cdc]
+include::_app-modernization-cdc.adoc[]
+
+[#event-driven]
+include::_app-modernization-event-driven.adoc[]
