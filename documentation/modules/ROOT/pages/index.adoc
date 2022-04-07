@@ -13,20 +13,4 @@ Learn about common scenarios faced by developers and architects, its challenges 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 [#explore]
-== Explore
-
-It's time to boost your cloud-native application architectural design with bleeding-edge technology backed by open-source software. Explore the use cases and learn recommended solutions for each of these challenges:
-
-** xref:app-modernization.adoc[**Application Modernization**]
-
-* xref:app-modernization.adoc#cdc[Effective application modernization with change data capture]
-
-**Edge-to-Cloud Pipelines**
-
-* Gather and prepare data for AI/ML
-
-**Event driven architecture**c
-
-* Extend app modernization to bring agility, responsiveness and extensibility
-
-
+include::solution-pattern-list.adoc[]

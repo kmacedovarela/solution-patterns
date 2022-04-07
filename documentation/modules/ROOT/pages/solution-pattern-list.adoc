@@ -1,0 +1,14 @@
+It's time to boost your cloud-native application architectural design with bleeding-edge technology backed by open-source software. Explore the use cases and learn recommended solutions for each of these challenges:
+
+** xref:app-modernization.adoc[**Application Modernization**]
+
+* xref:app-modernization.adoc#cdc[Effective application modernization with change data capture]
+
+**Edge-to-Cloud Pipelines**
+
+* Gather and prepare data for AI/ML
+
+**Event driven architecture**c
+
+* Extend app modernization to bring agility, responsiveness and extensibility
+
