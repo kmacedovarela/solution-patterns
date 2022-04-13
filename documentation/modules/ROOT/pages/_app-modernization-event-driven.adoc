@@ -1,4 +1,0 @@
-# Event Driven Architectures
-
-[#event-driven]
-lorem
