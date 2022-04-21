@@ -1,4 +1,4 @@
 * xref:index.adoc[Home Page]
 * https://redhat-solution-patterns.github.io/solution-pattern-modernization-cdc/[Adopting Change Data Capture for stack modernization]
-* https://btison.github.io/solution-pattern-enhancing-applications/[Enhancing Applications with Application Services]
+* https://redhat-solution-patterns.github.io/solution-pattern-enhancing-applications/[Enhancing Applications with Application Services]
 
