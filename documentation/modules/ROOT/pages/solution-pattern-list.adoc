@@ -4,11 +4,7 @@ It's time to boost your cloud-native application architectural design with bleed
 
 * https://redhat-solution-patterns.github.io/solution-pattern-modernization-cdc/[Adopting Change Data Capture for stack modernization]
 * https://redhat-solution-patterns.github.io/solution-pattern-enhancing-applications[Enhancing Applications with Application Services]
-
-
-**Edge-to-Cloud Pipelines**
-
-* Gather and prepare data for AI/ML
+* Edge-to-Cloud Pipelines: Gather and prepare data for AI/ML (Coming Soon)
 
 
 
