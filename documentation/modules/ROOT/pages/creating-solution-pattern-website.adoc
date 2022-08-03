@@ -1,0 +1,38 @@
+= Contributors Guide: Frequently Asked Questions
+:page-layout: home
+:!sectids:
+:toc: macro
+:toclevels: 2-2
+:toc-title:
+
+Check the contributors' frequently asked questions below:
+
+toc::[]
+
+== What are solution patterns for cloud native architecture?
+
+It's a resourceful set of information about an opinionated reference architecture that addresses one or more scenarios and challenges faced by developers and architects.
+
+== What is part of a solution pattern?
+
+See the key assets that initially composes a solution pattern:
+- Architectural representation of the solution (preferably with https://c4model.com/[C4 Model]);
+- Reproducible implementation of the architectural solution;
+- Open documentation through a website (for more information check #TODO[add reference];
+- Potential use cases and objectives;
+- Architecture technical explanation;
+- Implementation (demo) explanation and details;
+
+== Who can contribute?
+The solution patterns are open source under the apache license and everyone is welcome to contribute by sending fixes, enhancements and creating new solutions.
+
+== How to contribute?
+These are some ways you can contribute to the architectural solution patterns for cloud native apps:
+- Report issues via GitHub;
+- Send pull requests to fix open issues or enhance existing content and demos;
+- Create new solution patterns and submit via pull request;
+
+== Who are the people behind the solution patterns?
+
+The content shared with all the community of developers and architects are mostly brought and backed by Red Hat experienced professionals. Welcome external contributors as welcome as well. 
+
