@@ -63,6 +63,7 @@ npx gulp
 == Next actions
 
 As the next step you might want to:
+
 * xref::creating-solution-pattern-website.adoc#structure[get familiar with the project's structure].
 * xref::creating-solution-pattern-website.adoc#_language_and_components[Know the available capabilities to boost your document].
 
