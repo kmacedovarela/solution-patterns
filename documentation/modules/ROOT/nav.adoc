@@ -1,4 +1,8 @@
-* xref:index.adoc[Home Page]
-* https://redhat-solution-patterns.github.io/solution-pattern-modernization-cdc/[Modernize your stack with Change Data Capture]
-* https://redhat-solution-patterns.github.io/solution-pattern-enhancing-applications/[Enhancing Applications with Application Services]
-
+* xref:index.adoc[Solution Patterns]
+** https://redhat-solution-patterns.github.io/solution-pattern-modernization-cdc/[Modernize your stack with Change Data Capture]
+** https://redhat-solution-patterns.github.io/solution-pattern-enhancing-applications/[Enhancing Applications with Application Services]
+* xref::contributors-guide.adoc[Contributor's guide]
+** xref::contributors-faq.adoc[Frequently Asked Questions]
+** xref::creating-solution-pattern-website.adoc[Creating a new solution pattern website]
+*** xref::creating-solution-pattern-website.adoc#_quickstart_guide[Quickstart]
+*** xref::creating-solution-pattern-website.adoc#full-guide[In-depth guide]

@@ -1,38 +1,363 @@
-= Contributors Guide: Frequently Asked Questions
+= Contributors Guide: Creating your Solution Pattern's Website
 :page-layout: home
-:!sectids:
 :toc: macro
-:toclevels: 2-2
+:toclevels: 5
 :toc-title:
 
-Check the contributors' frequently asked questions below:
+Documenting your solution pattern although pretty simple, is highly beneficial for those who seek to learn about it and see the details of how it addresses its proposed technical challenges. 
 
-toc::[]
+You can choose between:
 
-== What are solution patterns for cloud native architecture?
+* Watching a 1-minute video starting a project from scratch, building and starting it;
+* Get started in less than fifteen minutes with a brief xref:creating-solution-pattern-website.adoc#_quickstart_guide[ quickstart guide] or
+* Go deep into the details using the xref:creating-solution-pattern-website.adoc#full-guide[full guide].
 
-It's a resourceful set of information about an opinionated reference architecture that addresses one or more scenarios and challenges faced by developers and architects.
+These are the core targets for those creating a new documentation: create, build and run, document , publish.
 
-== What is part of a solution pattern?
+image::docs-process.png[width=100%]
 
-See the key assets that initially composes a solution pattern:
-- Architectural representation of the solution (preferably with https://c4model.com/[C4 Model]);
-- Reproducible implementation of the architectural solution;
-- Open documentation through a website (for more information check #TODO[add reference];
-- Potential use cases and objectives;
-- Architecture technical explanation;
-- Implementation (demo) explanation and details;
+//toc::[]
 
-== Who can contribute?
-The solution patterns are open source under the apache license and everyone is welcome to contribute by sending fixes, enhancements and creating new solutions.
+== Quickstart Guide 
 
-== How to contribute?
-These are some ways you can contribute to the architectural solution patterns for cloud native apps:
-- Report issues via GitHub;
-- Send pull requests to fix open issues or enhance existing content and demos;
-- Create new solution patterns and submit via pull request;
+Run through this 15-minute section to get started quickly. If you're looking for a detailed guide refer to the <<full-guide>>.
 
-== Who are the people behind the solution patterns?
+[#prereqs]
+=== Prerequisites
 
-The content shared with all the community of developers and architects are mostly brought and backed by Red Hat experienced professionals. Welcome external contributors as welcome as well. 
+Before getting started, make sure to have the following CLI tools installed on your local machine: `git`, `node`, `npm`(>=12.13.0) and `gulp`.
 
+=== Creating a new project 
+
+To save you some time and quickly get started documenting, we'll use as a foundation the https://github.com/redhat-solution-patterns/solution-pattern-website-template[Solution Pattern website template]. 
+
+To create a new project:
+
+. Open the https://github.com/redhat-solution-patterns/solution-pattern-website-template[template's repository] and click on the green button *"Use this template"*; 
+. Insert your repository name (e.g. `solution-pattern-xzy`) and a description and click on *"Create repository from template"*;
++
+IMPORTANT: It's ok to start the project in your organization or any other. Once you're ready to publish your first version, you can move or fork the repository into the https://github.com/redhat-solution-patterns[redhat-solution-patterns] organization. 
++ 
+. Clone the *new* repository to your local machine using `git clone`;
+
+=== Running the project
+
+Next, let's build and run the project on development mode. 
+
+[TIP]
+You can rely on hot-reload features during your development; therefore, you'll save time validating your implementation's output results.
+
+. In a terminal, navigate to your project's repository;
+. Build and start the project with:
++
+[.console-input]
+[source,shell script]
+```
+npm install
+npx gulp
+```
++
+. A new page should open on your browser pointing to http://localhost:3000/solution-pattern-template/index.html[] 
+
+
+== Next actions
+
+As the next step you might want to:
+* xref::creating-solution-pattern-website.adoc#structure[get familiar with the project's structure].
+* xref::creating-solution-pattern-website.adoc#_language_and_components[Know the available capabilities to boost your document].
+
+[#full-guide]
+== In-depth guide 
+
+Learn how you can create a new site to document your solution pattern.
+
+Check how to create the project, clone, build and run it:
+
+video::H1_hw8LqBos[youtube, width=800, height=480]
+
+Next, see all the details on how to get up and running with your documentation.
+
+=== 1. Create a new project
+
+To create a new solution pattern site follow the steps below:
+
+1. Access https://github.com/redhat-solution-patterns/solution-pattern-website-template;
+2. Click on the `Use this template` green button;
+. Type the name of your solution pattern, e.g. "solution-pattern-xyz".
+. Click on the `Create repository from template` button.
+
+You should have a new repository with the required files and configurations to get started with content development.
+
+****
+.Using a template to be efficiently consistent 
+
+The solution pattern page template is available for contributors: https://github.com/redhat-solution-patterns/solution-pattern-website-template.
+
+[TIP] 
+For more details check the section: <<About the Solution Pattern Site Template>>.
+
+Using this project's template, developers can easily create new doc pages with a default layout, pages, headings, and configurations.
+****
+
+=== 2. Build and run
+
+==== Prerequisites
+You'll need the following software:
+
+* Git (command: git)
+* Node.js (commands: node v12+ and npm)
+* Gulp (command: gulp)
+
+[TIP]
+For information on how to install the prerequisites, refer to <<_additional_installation_information>>
+
+==== Setting up the new project
+
+1. Using a terminal, clone and access the generated project:
+[.console-input]
+[source,shell script]
+```
+git clone https://github.com/youruser/solution-pattern-xyz.git
+cd solution-pattern-xyz
+```
+2. Use npm to install the project's dependencies
++
+[.console-input]
+[source,shell script]
+```
+npm install
+```
+
+==== Starting live preview mode
+
+To build and preview the project locally you can run:
+```
+ $ npx gulp
+```
+
+The browser should open automatically, and you can also see the endpoint listed in the output of the previous command execution: http://localhost:3000[]
+
+[#structure]
+==== The project's structure
+
+Website configuration::
+There are three main configuration files to be aware of: `antora.yml`, `dev-site.yml` and `site.yml`.
+
+. `solution-pattern-xyz/documentation/antora.yml`: Where you can update the solution pattern's `name` and `title`;
+. `solution-pattern-xyz/dev-site.yml`: Where you can update the `start_page` to match the `name` configured in `antora.yml`.
+. `solution-pattern-xyz/site.yml`:Update the `start_page` like you did on the previous step. The `url` will eventually match the published page's address.
++
+[TIP]
+When using `npx gulp`, the preview site reflects the `dev-site.yml` configuration.
++
+
+Documentation to play with::
+There's plenty material available to boost your start, including pages, titles and subtitles, navigation menu, and external references.
+Content Location::
+The content is mostly located under `solution-pattern-xyz/documentation`.
+Navigation::
+The navigation menu on the left has automatic counters to define the section number. Modify the navigation by changing the file: `solution-pattern-xyz/documentation/modules/ROOT/nav.adoc`.
+Pages::
+You have a coherent content structure at hand. It includes:
+** Core files: index, solution pattern introduction, architecture, demonstration and workshop; These are located under `solution-pattern-xyz/documentation/modules/ROOT/pages`;
+** Headings that follow those of other existing solution patterns very closely.
++
+[CAUTION]
+====
+Feel free to remove and adjust what doesn't serve you. However, it's highly recommended to stick to the suggested level 1 headings (e.g., "= Title"). For subheadings (h2+), try to stick to what's proposed for consistency, but go ahead and use different and more adequate subtitles when you need to.
+====
+
+=== 3. Document 
+
+In this phase you'll share all your knowledge while adopting adoc's language and components in the pages amongst the project's content structure. 
+
+==== Language and components 
+
+For a majority of the work, you are welcome to use several of what Asciidoc components have to offer. Get started with https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[AsciiDoc Language Syntax quick reference,window=_blank].Adding to that, you can also use the features provided by Red Hat Developers for the Scholars template, such as clipboard, tabs and different formats for console input and output.
+
+See syntax highlights in the xref:highlights[Appendix: Documentation Syntax Highlights].
+
+==== Content structure
+
+The solution patterns are structured in four major sections (which are also part of the navigation menu):
+
+*  *Home page*: An overview about the solution. Should give examples of use cases and scenarios it addresses an applies to. An overview of the story behind the solution implementation and of the implementation architecture itself. 
+* *Architecture*: Covers common challenges such as antipatterns, not-optimal technical solutions and how it impacts a successful implementation from a technical perspective. Also includes an objective bullet list of the technologies used in this solution. Here is where you can include all the architecture diagrams and explanations.
+* *See the solution in action*: This is where users can see the working solution with content such as videos, text descriptions, screenshots and more. If available, it can also bring guides on how to install the demonstration implementation and its walkthrough.
+* *Workshop*: if available, brings details on how to install and deliver the workshop.  
+
+Refer to existing solution patterns for inspiration on ideas you can adopt on your own solution pattern documentation. 
+
+=== 4.Publish
+
+This section is currently under development and should be out soon.
+
+//To have your solution pattern listed in the top menu, please open a new issue in
+//https://github.com/redhat-solution-patterns/course-ui/issues[this project: https://github.com/redhat-solution-patterns/course-ui/issues,window=_blank].
+//
+//Make sure to inform:
+//
+//* Short title
+//* Main category (if appropriate). e.g. "Application modernization", "Edge", etc.
+
+== Appendix 
+=== Additional installation information
+
+==== Node.js
+
+In this guide, we'll be installing Node.js 18.
+
+While you can install Node.js from the official packages, we strongly recommend that you use nvm (Node Version Manager) to manage your Node.js installation(s).
+Follow the nvm installation instructions to set up nvm on your machine.
+
+Once you've installed nvm, open a new terminal and install Node.js 18 using the following command:
+
+ $ nvm install 18
+
+You can switch to this version of Node.js at any time using the following command:
+
+ $ nvm use 18
+
+To make Node.js 10 the default in new terminals, type:
+
+ $ nvm alias default 18
+
+Now that you have Node.js installed, you can proceed with installing the Gulp CLI.
+
+==== Gulp 
+
+You'll need the Gulp command-line interface (CLI) to run the build.
+The Gulp CLI package provides the `gulp` command which, in turn, executes the version of Gulp declared by the project.
+
+You should install the Gulp CLI globally (which resolves to a location in your user directory if you're using nvm) using the following command:
+
+ $ npm install -g gulp-cli
+
+Verify the Gulp CLI is installed and on your PATH by running:
+
+ $ gulp --version
+
+Now that you have the prerequisites installed, you can fetch and build the UI project.
+
+=== About the Solution Pattern Site Template
+
+The template is available at: https://github.com/redhat-solution-patterns/solution-pattern-website-template.
+
+This strategy benefits content writers by:
+
+* Allowing for a simple projects creation flow: a couple of clicks and it's done;
+* Providing, for free, a compatible look and feel with other https://redhat-solution-patterns.github.io/[existing solution patterns];
+* Recommended high-level page structure, sections, and navigation menu, providing readers a similar experience across different solution patterns;
+* Several documentation code samples that show useful features available;
+* Allowing focus on what matters - the content. Using Asciidoc, there's no need to spend extra hours on CSS customization for page and text formatting.
+* Bringing a ready-to-use deployment pipeline (https://github.com/redhat-solution-patterns/solution-pattern-website-template/blob/main/.github/workflows/docs.yml[GitHub action]) that builds and publishes the project website.
+
+The solution pattern's template is derived from the https://github.com/redhat-scholars/courseware-template[Red Hat Scholars courseware template], with extra customization:
+
+* UI: The pages are customized to represent the goals of the Red Hat Solution Pattern projects. The forked projects and changes are available at: https://github.com/redhat-scholars/course-ui[]
+* Content recommendation: out-of-the-box configuration, content and structure that matches the target objectives of a solution pattern documentation. 
+
+[#highlights]
+=== Documentation components highlights 
+
+
+Admonitions::
+Use `NOTE`,`TIP`,`IMPORTANT`,`CAUTION` or `WARNING` to create nice admonition blocks.
++
+[source,adoc]
+-----
+[NOTE] This is nice admonition block for a note.  
+-----
++
+More details on how to use: https://docs.asciidoctor.org/asciidoc/latest/blocks/admonitions/[AsciiDoctor Admonitions].
+
+
+[NOTE]
+Information below is part of https://redhat-scholars.github.io/build-course/rhs-build-course/index.html["Writing a RedHat scholar Course",window=_blank], by Red Hat Developers.
+
+Copy-Pasteable Code::
+
+To have your code/commands easily copied and pasted, you can use the special styling `.console-input` on the AsciiDoc source blocks. That should enables clipboard for the source block.
++
+[source,adoc]
+-----
+[.console-input]
+[source,adoc]
+----
+kubectl get pods
+----
+-----
+
++
+The output result of the above code is:
++
+[.console-input]
+[source,adoc]
+----
+kubectl get pods
+----
+
+Console Output::
++
+As you have commands that gets executed, you may wish to show the out of the command. Like adding special style source block for console input, you can add similar style like `.console-output` to the source block.
++
+[source,adoc]
+-----
+[.console-input]
+[source,adoc]
+----
+echo "Hello World!"
+----
+-----
++
+The output result of the above code is:
++
+[.console-output]
+[source,bash]
+----
+Hello World!
+----
+
+Tabs::
++
+Another resource you can use are *Tabs*. To do so, use the `[tabs]` macro as shown below:
++
+[.console-input]
+[source,adoc]
+----
+[tabs]
+====
+one::
++
+--
+--
+two::
++
+--
+--
+====
+----
++
+The output result of the above code is:
++
+[tabs]
+====
+One::
++
+--
+[.console-input]
+[source,bash]
+----
+echo Hello World!
+----
+--
+Two::
++
+--
+[.console-output]
+[source,bash]
+----
+Hello World!
+----
+--
+====
