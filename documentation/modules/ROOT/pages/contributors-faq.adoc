@@ -16,6 +16,7 @@ It's a resourceful set of information about an opinionated reference architectur
 == What is part of a solution pattern?
 
 See the key assets that initially composes a solution pattern:
+
 - Architectural representation of the solution (preferably with https://c4model.com/[C4 Model]);
 - Reproducible implementation of the architectural solution;
 - Open documentation through a website (for more information check #TODO[add reference];
@@ -30,6 +31,7 @@ The solution patterns are open source under the apache license and everyone is w
 == How to contribute?
 
 These are some ways you can contribute to the architectural solution patterns for cloud native apps:
+
 - Report issues via GitHub;
 - Send pull requests to fix open issues or enhance existing content and demos;
 - Create new solution patterns and submit via pull request;
