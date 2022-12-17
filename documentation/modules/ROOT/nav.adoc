@@ -1,6 +1,7 @@
 * xref:index.adoc[Solution Patterns]
 ** https://redhat-solution-patterns.github.io/solution-pattern-modernization-cdc/[Modernize your stack with Change Data Capture]
 ** https://redhat-solution-patterns.github.io/solution-pattern-enhancing-applications/[Enhancing Applications with Application Services]
+** https://redhat-solution-patterns.github.io/solution-pattern-apim-servicemesh/comprehensive-service-architecture[Comprehensive Service Architecture with API Management and Service Mesh]
 * xref::contributors-guide.adoc[Contributor's guide]
 ** xref::contributors-faq.adoc[Frequently Asked Questions]
 ** xref::creating-solution-pattern-website.adoc[Creating a new solution pattern website]
