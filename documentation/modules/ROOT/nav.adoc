@@ -3,6 +3,7 @@
 ** https://redhat-solution-patterns.github.io/solution-pattern-enhancing-applications/[Enhancing Applications with Application Services]
 ** https://redhat-solution-patterns.github.io/solution-pattern-apim-servicemesh/comprehensive-service-architecture[Comprehensive Service Architecture with API Management and Service Mesh]
 ** https://redhat-solution-patterns.github.io/solution-pattern-edge-to-cloud-pipelines/solution-pattern-edge-to-cloud-pipelines[Edge-to-Cloud Pipelines: Gather and prepare data for AI/ML]
+** https://redhat-solution-patterns.github.io/solution-pattern-multicloud-gitops-odf/[MultiCloud GitOps with ArgoCD, OpenShift Advanced Cluster Management and OpenShift Data Foundation]
 * xref::contributors-guide.adoc[Contributor's guide]
 ** xref::contributors-faq.adoc[Frequently Asked Questions]
 ** xref::creating-solution-pattern-website.adoc[Creating a new solution pattern website]
