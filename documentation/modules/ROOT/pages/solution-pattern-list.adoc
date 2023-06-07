@@ -12,5 +12,5 @@ It's time to boost your cloud-native application architectural design with bleed
 
 ** Managed Openshift
 
-* https://redhat-solution-patterns.github.io/solution-pattern-modernize-with-rosa/solution-pattern-rosa/index.html[Red Hat Openshift Service on AWS]
+* https://redhat-solution-patterns.github.io/solution-pattern-modernize-with-rosa/solution-pattern-rosa/index.html[Accelerate time to value with Red Hat Openshift Service on AWS]
 
