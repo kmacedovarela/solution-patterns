@@ -14,3 +14,7 @@ It's time to boost your cloud-native application architectural design with bleed
 
 * https://redhat-solution-patterns.github.io/solution-pattern-modernize-with-rosa/solution-pattern-rosa/index.html[Accelerate time to value with Red Hat Openshift Service on AWS]
 
+
+** Intelligent Applications
+
+* https://redhat-solution-patterns.github.io/solution-pattern-sentiment-analysis[Building Sentiment Analysis with AIML and Kafka]
