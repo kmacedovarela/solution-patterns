@@ -9,6 +9,7 @@ It's time to boost your cloud-native application architectural design with bleed
 ** DevOps
 
 * https://redhat-solution-patterns.github.io/solution-pattern-multicloud-gitops-odf/[MultiCloud GitOps with ArgoCD, OpenShift Advanced Cluster Management and OpenShift Data Foundation]
+* https://redhat-solution-patterns.github.io/solution-pattern-instant-multicloud/solution-pattern-instant-multicloud/index.html[Instant Multi Cloud - Openshift Everywhere]
 
 ** Managed Openshift
 
