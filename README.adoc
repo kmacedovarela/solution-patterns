@@ -2,22 +2,41 @@
 
 This is the home page that links to the more detailed guides of each solution pattern.
 
-=== How to run:
 
-For a live preview:
+== Live Preview
 
-1. Install gulp:
-+
-```
-yarn add gulp
-```
+When working with course development, you dont need to publish the site to view the changes. The template is enabled with live reload capability. 
 
-2. Launch gulp:
-+
-```
-npx gulp
-```
+Follow the steps outlined below to start the live reload mode:
 
-=== How to build the tutorial
+- From the root the courseware repository run the following command:
+
+[.console-input]
+[source,bash]
+----
+npm install
+----
+
+or 
+
+[.console-input]
+[source,bash]
+----
+yarn install
+----
+
+-  Once node modules are installed, run the following command to start the development mode: 
+
+[.console-input]
+[source,bash]
+----
+gulp
+----
+
+The gulp will start will start a local site server at http://localhost:3000.
+
+Once the local dev server is up, any changes made to the course source repository files will trigger the build and reload of the site with new changes.
+
+== How to build the tutorial
 
 Check the build courseware https://redhat-scholars.github.io/build-course[documentation]  on how folder structure, how to use macros and other gotchas

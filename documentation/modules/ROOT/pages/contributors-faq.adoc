@@ -1,4 +1,4 @@
-= Contributors Guide: Frequently Asked Questions
+== Contributors Guide: Frequently Asked Questions
 :page-layout: home
 :!sectids:
 :toc: macro
@@ -19,7 +19,7 @@ See the key assets that initially composes a solution pattern:
 
 - Architectural representation of the solution (preferably with https://c4model.com/[C4 Model]);
 - Reproducible implementation of the architectural solution;
-- Open documentation through a website (for more information check: xref::creating-solution-pattern-website.adoc[];
+- Open documentation through a website (for more information check: xref::creating-solution-pattern-website.adoc[]);
 - Potential use cases and objectives;
 - Architecture technical explanation;
 - Implementation (demo) explanation and details;
@@ -38,5 +38,5 @@ These are some ways you can contribute to the architectural solution patterns fo
 
 == Who are the people behind the solution patterns?
 
-The content shared with all the community of developers and architects are mostly brought and backed by Red Hat experienced professionals. Welcome external contributors as welcome as well. 
+The content shared with all the community of developers and architects are mostly brought and backed by Red Hat experienced professionals. We welcome external contributors as welcome as well. 
 
