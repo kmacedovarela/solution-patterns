@@ -1,11 +1,13 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: ''
+title: "[Feature]"
 labels: ''
 assignees: ''
 
 ---
+
+Do you have ideas for new Solution Patterns? Or have inputs on how to improve one? This is your space to let us know those amazing ideas
 
 **Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
