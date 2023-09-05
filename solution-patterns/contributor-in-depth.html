@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Solution Patterns for Cloud Native Architectures</title>
+    <link rel="canonical" href="https://redhat-solution-patterns.github.io/solution-patterns/solution-patterns/contributor-in-depth.html">
+    <link rel="prev" href="contributors-quickstart.html">
+    <link rel="next" href="appendix.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../_/css/site.css">
+<link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0X54HQY5H8"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0X54HQY5H8');
+</script>
+
+<style>
+  .container {
+  margin-right: auto;
+  margin-left: auto;
+  
+  }
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  word-wrap: break-word;
+  color: rgb(33, 37, 41) !important;
+  font-weight:normal; text-decoration:none !important;
+
+}
+
+a #card {
+  
+    
+
+}
+
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  
+}
+
+.badge {
+  background-color: grey;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 10px;
+  
+}
+
+.container .col {
+  margin: 15px !important;
+  padding: 15px !important;
+  background-color rgb(255, 255, 255)
+  box-shadow rgba(3, 3, 3, 0.12) 0px 4px 8px 0px, rgba(3, 3, 3, 0.06) 0px 0px 4px 0px
+  box-sizing border-box
+  color rgb(21, 21, 21)
+  word-wrap: break-word;
+  height: 10em !important;
+
+  
+
+}
+
+.container .col p {
+  
+}
+
+
+/* 2 columns (600px) */
+
+@media only screen and (min-width:600px) {
+  .container .col {
+    float: left;
+    width: 50%;
+  }
+}
+
+
+/* 3 columns (768px) */
+
+@media only screen and (min-width:768px) {
+  .container .col {
+    width: 33.333%;
+  }
+}
+
+
+/* 4 columns (992px) */
+
+@media only screen and (min-width:992px) {
+  .container .col {
+    width: 33%;
+  }
+}
+</style>  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://redhat-solution-patterns.github.io/" target="_blank"><img
+          src="../_/img/logo.png" height="40px" alt="Cloud Native Architecture Solution Patterns"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="https://redhat-solution-patterns.github.io/solution-patterns">Solution Patterns for Cloud Native Architectures</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+
+       
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Red Hat Patterns</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://redhat-gitops-patterns.io/" target="_blank">Portfolio Architecture&nbsp; <i class="fa fa-external-link"></i></a>
+            <a class="navbar-item" href="#">Red Hat Solution Patterns <br> &nbsp;(you are here)</a>
+            <a class="navbar-item" href="https://validatedpatterns.io/" target="_blank">Validated Patterns&nbsp; <i class="fa fa-external-link"></i></a>
+          </div>
+        </div>
+
+        <a class="navbar-item" target="_blank" href="https://www.redhat.com/en/products/application-foundations">Red Hat Application Services</a>
+        <a class="navbar-item" target="_blank" href="https://developers.redhat.com/app-dev-platform">Learn more</a>
+
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="solution-patterns" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html" class=" query-params-link">Red Hat Solution Patterns</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">An Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="patterns.html">The Solution Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="contributors-guide.html">Contributor&#8217;s guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="contributors-faq.html">Frequently Asked Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="creating-solution-pattern-website.html">Creating a new solution pattern website</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="contributors-quickstart.html">Quickstart</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="contributor-in-depth.html">In-depth guide</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat Solution Patterns</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Red Hat Solution Patterns</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Red Hat Solution Patterns</a></li>
+    <li><a href="contributors-guide.html">Contributor&#8217;s guide</a></li>
+    <li><a href="creating-solution-pattern-website.html">Creating a new solution pattern website</a></li>
+    <li><a href="contributor-in-depth.html">In-depth guide</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/redhat-solution-patterns/redhat-solution-patterns.github.io/edit/main/documentation/modules/ROOT/pages/contributor-in-depth.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<div class="sect1">
+<h2 id="full-guide"><a class="anchor" href="#full-guide"></a>In-depth Guide</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Learn how you can create a new site to document your solution pattern.</p>
+</div>
+<div class="paragraph">
+<p>Check how to create the project, clone, build and run it:</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe width="800" height="480" src="https://www.youtube.com/embed/H1_hw8LqBos?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Next, see all the details on how to get up and running with your documentation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_1_create_a_new_project"><a class="anchor" href="#_1_create_a_new_project"></a>1. Create a new project</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To create a new solution pattern site follow the steps below:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Access <a href="https://github.com/redhat-solution-patterns/solution-pattern-website-template" class="bare">https://github.com/redhat-solution-patterns/solution-pattern-website-template</a>;</p>
+</li>
+<li>
+<p>Click on the <code>Use this template</code> green button;</p>
+</li>
+<li>
+<p>Type the name of your solution pattern, e.g. "solution-pattern-xyz".</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Check the <strong>Include all branches</strong> to ensure the github pages get deployed correctly.</p>
+</li>
+<li>
+<p>Start the project in one of your organizations. Once you&#8217;re ready to publish your first version, you can move or fork the repository into the <a href="https://github.com/redhat-solution-patterns">redhat-solution-patterns</a> organization.</p>
+</li>
+<li>
+<p>To avail of the githubpage to publish your documentation, keep the repository as public.</p>
+</li>
+<li>
+<p>Click on <strong>"Create repository"</strong>;</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Click on the <code>Create repository from template</code> button.</p>
+</li>
+<li>
+<p>In a few seconds, you should have a new repository with the required files and configurations to get started with content development.</p>
+</li>
+<li>
+<p>In the <strong>Settings</strong> tab of the new repo, from left-hand nav, go to "General &gt; Code and automation &gt; Actions &gt; General"</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Scroll to the bottom of the page to the section <strong>Workflow permissions</strong>. Choose <strong>Read and write permissions</strong> and click <strong>Save</strong></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<div class="title">Using a template to be efficiently consistent</div>
+<p>The solution pattern page template is available for contributors: <a href="https://github.com/redhat-solution-patterns/solution-pattern-website-template" class="bare">https://github.com/redhat-solution-patterns/solution-pattern-website-template</a>.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+For more details check the section: <a href="#About the Solution Pattern Site Template">[About the Solution Pattern Site Template]</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Using this project&#8217;s template, developers can easily create new doc pages with a default layout, pages, headings, and configurations.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2_build_and_run"><a class="anchor" href="#_2_build_and_run"></a>2. Build and run</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_2_1_prerequisites"><a class="anchor" href="#_2_1_prerequisites"></a>2.1 Prerequisites</h3>
+<div class="paragraph">
+<p>You&#8217;ll need the following software:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Git (command: git)</p>
+</li>
+<li>
+<p>Node.js (commands: node v12+ and npm)</p>
+</li>
+<li>
+<p>Gulp (command: gulp)</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+For information on how to install the prerequisites, refer to <a href="#_additional_installation_information">[_additional_installation_information]</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_2_setting_up_the_new_project"><a class="anchor" href="#_2_2_setting_up_the_new_project"></a>2.2 Setting up the new project</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Using a terminal, clone and access the generated project:</p>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">git clone https://github.com/youruser/solution-pattern-xyz.git
+cd solution-pattern-xyz</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Use npm to install the project&#8217;s dependencies</p>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">npm install</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_3_starting_live_preview_mode"><a class="anchor" href="#_2_3_starting_live_preview_mode"></a>2.3 Starting live preview mode</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To build and preview the project locally you can run:</p>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">npx gulp</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The browser should open automatically, and you can also see the endpoint listed in the output of the previous command execution: <a href="http://localhost:3000" class="bare">http://localhost:3000</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="structure"><a class="anchor" href="#structure"></a>2.4 The project&#8217;s structure</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Website configuration::
+There are three main configuration files to be aware of: <code>antora.yml</code>, <code>dev-site.yml</code> and <code>site.yml</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>solution-pattern-xyz/documentation/antora.yml</code>: Where you can update the solution pattern&#8217;s <code>name</code> and <code>title</code>;</p>
+</li>
+<li>
+<p><code>solution-pattern-xyz/dev-site.yml</code>: Where you can update the <code>start_page</code> to match the <code>name</code> configured in <code>antora.yml</code>.</p>
+</li>
+<li>
+<p><code>solution-pattern-xyz/site.yml</code>:Update the <code>start_page</code> like you did on the previous step. The <code>url</code> will eventually match the published page&#8217;s address.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+When using <code>npx gulp</code>, the preview site reflects the <code>dev-site.yml</code> configuration.
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Documentation to play with</dt>
+<dd>
+<p>There&#8217;s plenty of ways to customise the solution patternmaterial available including pages, titles and subtitles, navigation menu, and external references.</p>
+</dd>
+<dt class="hdlist1">Content Location</dt>
+<dd>
+<p>The content is mostly located under <code>solution-pattern-xyz/documentation</code>.</p>
+</dd>
+<dt class="hdlist1">Navigation</dt>
+<dd>
+<p>The navigation menu on the left has automatic counters to define the section number. Modify the navigation by changing the file: <code>solution-pattern-xyz/documentation/modules/ROOT/nav.adoc</code>.</p>
+</dd>
+<dt class="hdlist1">Pages</dt>
+<dd>
+<p>You have a coherent content structure at hand. It includes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Core files: index, solution pattern introduction, architecture, demonstration and workshop; These are located under <code>solution-pattern-xyz/documentation/modules/ROOT/pages</code>;</p>
+</li>
+<li>
+<p>Headings that follow those of other existing solution patterns very closely.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Feel free to remove and adjust what doesn&#8217;t serve you. However, it&#8217;s highly recommended to stick to the suggested level 1 headings (e.g., "= Title"). For subheadings (h2+), try to stick to what&#8217;s proposed for consistency, but go ahead and use different and more adequate subtitles when you need to.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_document"><a class="anchor" href="#_3_document"></a>3. Document</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this phase you&#8217;ll share all your knowledge while adopting adoc&#8217;s language and components in the pages amongst the project&#8217;s content structure.</p>
+</div>
+<div class="sect2">
+<h3 id="_3_1_language_and_components"><a class="anchor" href="#_3_1_language_and_components"></a>3.1 Language and components</h3>
+<div class="paragraph">
+<p>For a majority of the work, you are welcome to use several of what Asciidoc components have to offer. Get started with <a href="https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/" target="_blank" rel="noopener">AsciiDoc Language Syntax quick reference</a>.Adding to that, you can also use the features provided by Red Hat Developers for the Scholars template, such as clipboard, tabs and different formats for console input and output.</p>
+</div>
+<div class="paragraph">
+<p>See syntax highlights in the <a href="#highlights">Appendix: Documentation Syntax Highlights</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_2_content_structure"><a class="anchor" href="#_3_2_content_structure"></a>3.2 Content structure</h3>
+<div class="paragraph">
+<p>The solution patterns are structured in four major sections (which are also part of the navigation menu):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Home page</strong>: An overview about the solution. Should give examples of use cases and scenarios it addresses an applies to. An overview of the story behind the solution implementation and of the implementation architecture itself.</p>
+</li>
+<li>
+<p><strong>Architecture</strong>: Covers common challenges such as antipatterns, not-optimal technical solutions and how it impacts a successful implementation from a technical perspective. Also includes an objective bullet list of the technologies used in this solution. Here is where you can include all the architecture diagrams and explanations.</p>
+</li>
+<li>
+<p><strong>See the solution in action</strong>: This is where users can see the working solution with content such as videos, text descriptions, screenshots and more. If available, it can also bring guides on how to install the demonstration implementation and its walkthrough.</p>
+</li>
+<li>
+<p><strong>Workshop</strong>: if available, brings details on how to install and deliver the workshop.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Refer to existing solution patterns for inspiration on ideas you can adopt on your own solution pattern documentation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_4_publish"><a class="anchor" href="#_4_publish"></a>4.Publish</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Make all the necessary changes to the cloned repo. Refer to these sections for more details on how to do this.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Get familiar with  <a href="#structure">the project&#8217;s structure</a>.</p>
+</li>
+<li>
+<p><a href="creating-solution-pattern-website.html#_language_and_components" class="xref page">Know the available capabilities to boost your document</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>To deploy the repo as github pages, you will need to manage GitHub Actions settings for your new repository. Navigate to the <strong>Settings</strong> tab</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>From left hand nav, go to <strong>General &gt; Code and automation &gt; Actions &gt; General</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/code-automation-general.png" alt="code automation general">
+</div>
+</div>
+</li>
+<li>
+<p>Scroll to the bottom of the page to the section <strong>Workflow permissions</strong>.</p>
+</li>
+<li>
+<p>Choose <strong>Read and write permissions</strong> and click <strong>Save</strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/read-write-permissions.png" alt="read write permissions">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>After your changes are made, commit and push your changes to git. This will auto-trigger a workflow which will deploy the pages as github pages.</p>
+</li>
+<li>
+<p>To view this the deployed github-pages, navigate to <strong>Actions</strong>  tab</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/actions-tab.png" alt="actions tab">
+</div>
+</div>
+</li>
+<li>
+<p>Click on the workflow which is named as <strong>pages build and deployment</strong>, and click on the link that is highlighted below within the <strong>deploy</strong> step.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/pages-build-deployment.png" alt="pages build deployment">
+</div>
+</div>
+</li>
+<li>
+<p>This link will open the deployed gitbub pages in a new tab. Each checkin you make will trigger a new github action, which will refresh this page</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="contributors-quickstart.html" class="query-params-link">Quickstart</a></span>
+  <span class="next"><a href="appendix.html" class="query-params-link">Appendix</a></span>
+</nav>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img
+          src="../_/img/app-services-logo.png" height="40px" alt="Cloud Native Architecture Solution Patterns"  href="https://redhat.com" ></a>
+</footer><script src="../_/js/vendor/clipboard.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

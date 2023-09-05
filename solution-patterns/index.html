@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Welcome to Red Hat Solutions Patterns for Cloud Native Applications :: Solution Patterns for Cloud Native Architectures</title>
     <link rel="canonical" href="https://redhat-solution-patterns.github.io/solution-patterns/solution-patterns/index.html">
-    <link rel="next" href="contributors-guide.html">
+    <link rel="next" href="patterns.html">
     <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../_/css/site.css">
 <link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0X54HQY5H8"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -19,7 +20,116 @@
 
   gtag('config', 'G-0X54HQY5H8');
 </script>
-  </head>
+
+<style>
+  .container {
+  margin-right: auto;
+  margin-left: auto;
+  
+  }
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  word-wrap: break-word;
+  color: rgb(33, 37, 41) !important;
+  font-weight:normal; text-decoration:none !important;
+
+}
+
+a #card {
+  
+    
+
+}
+
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  
+}
+
+.badge {
+  background-color: grey;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 10px;
+  
+}
+
+.container .col {
+  margin: 15px !important;
+  padding: 15px !important;
+  background-color rgb(255, 255, 255)
+  box-shadow rgba(3, 3, 3, 0.12) 0px 4px 8px 0px, rgba(3, 3, 3, 0.06) 0px 0px 4px 0px
+  box-sizing border-box
+  color rgb(21, 21, 21)
+  word-wrap: break-word;
+  height: 10em !important;
+
+  
+
+}
+
+.container .col p {
+  
+}
+
+
+/* 2 columns (600px) */
+
+@media only screen and (min-width:600px) {
+  .container .col {
+    float: left;
+    width: 50%;
+  }
+}
+
+
+/* 3 columns (768px) */
+
+@media only screen and (min-width:768px) {
+  .container .col {
+    width: 33.333%;
+  }
+}
+
+
+/* 4 columns (992px) */
+
+@media only screen and (min-width:992px) {
+  .container .col {
+    width: 33%;
+  }
+}
+</style>  </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
@@ -37,24 +147,18 @@
       <div class="navbar-end">
 
        
+
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Solution Patterns</a>
+          <a class="navbar-link" href="#">Red Hat Patterns</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://red.ht/enhance-with-cdc">Adopt Change Data Capture for <br/>stack modernization</a>
-            <a class="navbar-item" href="https://red.ht/enhance-with-eda">Enhancing Applications with Application Services</a>
+            <a class="navbar-item" href="https://redhat-gitops-patterns.io/" target="_blank">Portfolio Architecture&nbsp; <i class="fa fa-external-link"></i></a>
+            <a class="navbar-item" href="#">Red Hat Solution Patterns <br> &nbsp;(you are here)</a>
+            <a class="navbar-item" href="https://validatedpatterns.io/" target="_blank">Validated Patterns&nbsp; <i class="fa fa-external-link"></i></a>
           </div>
         </div>
 
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Other</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://redhat-gitops-patterns.io/">GitOps Solution Patterns</a>
-            <a class="navbar-item" href="https://hybrid-cloud-patterns.io/">Hybrid Cloud Solution Patterns</a>
-          </div>
-        </div>
-
-        <a class="navbar-item" target="_blank" href="https://www.redhat.com/en/products/middleware">Red Hat Application Services</a>
-        <a class="navbar-item" target="_blank" href="https://developers.redhat.com/middleware">Learn more</a>
+        <a class="navbar-item" target="_blank" href="https://www.redhat.com/en/products/application-foundations">Red Hat Application Services</a>
+        <a class="navbar-item" target="_blank" href="https://developers.redhat.com/app-dev-platform">Learn more</a>
 
       </div>
     </div>
@@ -71,22 +175,10 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Solution Patterns</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="https://redhat-solution-patterns.github.io/solution-pattern-modernization-cdc/">Modernize your stack with Change Data Capture</a>
+    <a class="nav-link" href="index.html">An Introduction</a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="https://redhat-solution-patterns.github.io/solution-pattern-enhancing-applications/">Enhancing Applications with Application Services</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="https://redhat-solution-patterns.github.io/solution-pattern-apim-servicemesh/comprehensive-service-architecture">Comprehensive Service Architecture with API Management and Service Mesh</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="https://redhat-solution-patterns.github.io/solution-pattern-multicloud-gitops-odf/">MultiCloud GitOps with ArgoCD, OpenShift Advanced Cluster Management and OpenShift Data Foundation</a>
-  </li>
-</ul>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="patterns.html">The Solution Patterns</a>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -100,10 +192,13 @@
     <a class="nav-link" href="creating-solution-pattern-website.html">Creating a new solution pattern website</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="creating-solution-pattern-website.html#_quickstart_guide">Quickstart</a>
+    <a class="nav-link" href="contributors-quickstart.html">Quickstart</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="creating-solution-pattern-website.html#full-guide">In-depth guide</a>
+    <a class="nav-link" href="contributor-in-depth.html">In-depth guide</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="appendix.html">Appendix</a>
   </li>
 </ul>
   </li>
@@ -140,7 +235,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Red Hat Solution Patterns</a></li>
-    <li><a href="index.html">Solution Patterns</a></li>
+    <li><a href="index.html">An Introduction</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/redhat-solution-patterns/redhat-solution-patterns.github.io/edit/main/documentation/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
@@ -149,7 +244,7 @@
 <article class="doc">
 <h1 class="page">Welcome to Red Hat Solutions Patterns for Cloud Native Applications</h1>
 <div class="sect1 text-center strong">
-<h2>Cloud native architectures done right</h2>
+<h2 id="intro"><a class="anchor" href="#intro"></a>Cloud native architectures done right</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Learn about common scenarios faced by developers and architects, its challenges and proposed architectural solutions with Red Hat technologies. Here you can find solution for diverse set of use cases on cloud adoption and application modernization, including background story, reference architecture, technical implementation of the solution and much more.</p>
@@ -160,65 +255,29 @@
 <h2 id="whatis"><a class="anchor" href="#whatis"></a>What is a solution pattern?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Red Hat cloud native architecture (CNA) solution patterns are a set of opinionated practices on how to design, develop, integrate, automate and deliver cloud native applications. It targets common problems and use cases faced by organizations that target digital transformation through cloud adoption and who are on the journey of app modernization. Each solution pattern documents a specific reference architecture that can be replicated or can be used to inspire technical decision makers on how to achieve their goals. All the solutions are built on top of the Red Hat technologies portfolio, with a slightly higher focus on Red Hat Application Foundations.</p>
+<p>The Red Hat cloud native architecture (CNA) solution patterns are a set of opinionated practices on how to design, develop, integrate, automate and deliver cloud native applications. It targets common problems and use cases faced by organizations that target digital transformation through cloud adoption and who are on the journey of app modernization.</p>
 </div>
-<div id="explore" class="paragraph">
-<p>It&#8217;s time to boost your cloud-native application architectural design with bleeding-edge technology backed by open-source software. Explore the use cases and learn recommended solutions for each of these challenges:</p>
+<div class="paragraph">
+<p>Each solution pattern documents a specific reference architecture that can be replicated or can be used to inspire technical decision makers on how to achieve their goals.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Application Modernization</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://redhat-solution-patterns.github.io/solution-pattern-modernization-cdc/">Adopting Change Data Capture for stack modernization</a></p>
-</li>
-<li>
-<p><a href="https://redhat-solution-patterns.github.io/solution-pattern-enhancing-applications">Enhancing Applications with Application Services</a></p>
-</li>
-<li>
-<p><a href="https://redhat-solution-patterns.github.io/solution-pattern-apim-servicemesh/comprehensive-service-architecture">Comprehensive Service Architecture with API Management and Service Mesh</a></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>All the solutions are built on top of the Red Hat technologies portfolio, combined with other complementing open source technologies, to showcase how Red Hat provides the ultimate cloud-native application platform so that you can spend less time dealing with operational tasks and more time building applications.</p>
 </div>
-</li>
-<li>
-<p>DevOps</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://redhat-solution-patterns.github.io/solution-pattern-multicloud-gitops-odf/">MultiCloud GitOps with ArgoCD, OpenShift Advanced Cluster Management and OpenShift Data Foundation</a></p>
-</li>
-</ul>
 </div>
-</li>
-<li>
-<p>Managed Openshift</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://redhat-solution-patterns.github.io/solution-pattern-modernize-with-rosa/solution-pattern-rosa/index.html">Accelerate time to value with Red Hat Openshift Service on AWS</a></p>
-</li>
-</ul>
 </div>
-</li>
-<li>
-<p>Intelligent Applications</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://redhat-solution-patterns.github.io/solution-pattern-sentiment-analysis">Building Sentiment Analysis with AIML and Kafka</a></p>
-</li>
-</ul>
+<div class="sect1">
+<h2 id="explore"><a class="anchor" href="#explore"></a>Explore Red Hat Solution Patterns</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>View the list of <a href="patterns.html" class="xref page">Solution Patterns</a></p>
 </div>
-</li>
-</ul>
+<div class="paragraph">
+<p>Go ahead and <em>drive innovation</em> and <em>boost productivity</em> with the solution patterns.</p>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="next"><a href="contributors-guide.html" class="query-params-link">Contributor&#8217;s guide</a></span>
+  <span class="next"><a href="patterns.html" class="query-params-link">The Solution Patterns</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
