@@ -1,6 +1,6 @@
 
 
-== The Solution Patterns
+== Explore Solution Patterns
 :page-layout: home
 :!sectids:
 It's time to boost your cloud-native application architectural design with bleeding-edge technology backed by open-source software. Explore the use cases and learn recommended solutions for each of these challenges.

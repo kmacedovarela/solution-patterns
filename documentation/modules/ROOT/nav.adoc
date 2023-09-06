@@ -1,5 +1,5 @@
 * xref:index.adoc[An Introduction]
-* xref:patterns.adoc[The Solution Patterns]
+* xref:patterns.adoc[Explore Solution Patterns]
 * xref::contributors-guide.adoc[Contributor's guide]
 ** xref::contributors-faq.adoc[Frequently Asked Questions]
 ** xref::creating-solution-pattern-website.adoc[Creating a new solution pattern website]
