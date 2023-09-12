@@ -1,3 +1,5 @@
+= Welcome to Red Hat Solutions Patterns for Cloud Native Applications
+
 == Contributors Guide
 :page-layout: home
 :!sectids:
