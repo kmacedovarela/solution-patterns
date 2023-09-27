@@ -1,3 +1,5 @@
+= Solution Patterns: Contributor's guide
+
 == Quickstart Guide 
 
 Run through this 15-minute section to get started quickly. If you're looking for a detailed guide refer to the xref:contributor-in-depth.adoc#full-guide[full guide].
