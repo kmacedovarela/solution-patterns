@@ -1,4 +1,6 @@
-== Contributors Guide: Frequently Asked Questions
+= Solution Patterns: Contributors Guide
+
+== Frequently Asked Questions
 :page-layout: home
 :!sectids:
 :toc: macro

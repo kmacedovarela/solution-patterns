@@ -1,3 +1,5 @@
+= Solution Patterns: Contributors Guide
+
 == Appendix 
 === Additional installation information
 

@@ -1,3 +1,5 @@
+= Solution Patterns: Contributors Guide
+
 == Contributors Guide: Creating your Solution Pattern's Website
 :page-layout: home
 :toc: macro

@@ -1,3 +1,4 @@
+= Solution Patterns: Contributors Guide
 
 [#full-guide]
 == In-depth Guide 
