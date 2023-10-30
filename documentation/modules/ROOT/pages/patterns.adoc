@@ -34,7 +34,7 @@ It's time to boost your cloud-native application architectural design with bleed
 
  
 <a href="https://redhat-solution-patterns.github.io/solution-pattern-sentiment-analysis" target="_blank"  class="col card">
-    <div><strong>Event-driven Sentiment Analysis </strong></div>
+    <div><strong>Event-driven intelligent applications </strong></div>
     <div style="font-size:14px">
       Event-driven architecture with streaming data using Kafka, Knative and AI/ML.
     </div>
