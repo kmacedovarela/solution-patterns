@@ -48,6 +48,13 @@ It's time to boost your cloud-native application architectural design with bleed
     </div>
 </a>
 
+<a href="https://redhat-solution-patterns.github.io/solution-pattern-apim-servicemesh" target="_blank"  class="col card">  
+    <div><strong>Fuse to Apache Camel migration</strong></div>
+    <div style="font-size:14px">
+      An accelerated path to migrating applications from Red Hat Fuse to Red Hat Build of Apache Camel based on templates.
+    </div>
+</a>
+
 <a href="https://redhat-solution-patterns.github.io/solution-pattern-multicloud-gitops-odf" target="_blank"  class="col card">  
     <div><strong>MultiCloud GitOps with ODF</strong></div>
     <div style="font-size:14px">
