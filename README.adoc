@@ -1,4 +1,4 @@
-== Red Hat Solution Patterns
+== Red Hat Solution Patterns - Contribution Content Only
 
 This is the home page that links to the more detailed guides of each solution pattern.
 
