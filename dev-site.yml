@@ -4,7 +4,7 @@ runtime:
 site:
   title: Solution Patterns for Cloud Native Architectures
   url: http://localhost:3000/rhs-build-course/index.html
-  start_page: solution-patterns::index.adoc
+  start_page: patterns::index.adoc
 
 content:
   sources:
