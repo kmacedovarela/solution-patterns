@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Solution Patterns: Contributors Guide :: Solution Patterns for Cloud Native Architectures</title>
+    <link rel="canonical" href="https://redhat-solution-patterns.github.io/patterns/appendix.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../_/css/site.css">
+<link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0X54HQY5H8"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0X54HQY5H8');
+</script>
+
+<style>
+  .container {
+  margin-right: auto;
+  margin-left: auto;
+  
+  }
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  word-wrap: break-word;
+  color: rgb(33, 37, 41) !important;
+  font-weight:normal; text-decoration:none !important;
+
+}
+
+a #card {
+  
+    
+
+}
+
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  
+}
+
+.badge {
+  background-color: grey;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 10px;
+  
+}
+
+.container .col {
+  margin: 15px !important;
+  padding: 15px !important;
+  background-color rgb(255, 255, 255)
+  box-shadow rgba(3, 3, 3, 0.12) 0px 4px 8px 0px, rgba(3, 3, 3, 0.06) 0px 0px 4px 0px
+  box-sizing border-box
+  color rgb(21, 21, 21)
+  word-wrap: break-word;
+  height: 10em !important;
+
+  
+
+}
+
+.container .col p {
+  
+}
+
+
+/* 2 columns (600px) */
+
+@media only screen and (min-width:600px) {
+  .container .col {
+    float: left;
+    width: 50%;
+  }
+}
+
+
+/* 3 columns (768px) */
+
+@media only screen and (min-width:768px) {
+  .container .col {
+    width: 33.333%;
+  }
+}
+
+
+/* 4 columns (992px) */
+
+@media only screen and (min-width:992px) {
+  .container .col {
+    width: 33%;
+  }
+}
+</style>  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://redhat-solution-patterns.github.io/" target="_blank"><img
+          src="../_/img/logo.png" height="40px" alt="Cloud Native Architecture Solution Patterns"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white"
+        href="https://redhat-solution-patterns.github.io">Solution Patterns for Cloud Native Architectures</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#" style="color: white">Architectures & Patterns</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.redhat.com/architect/portfolio/" target="_blank">Portfolio Architecture&nbsp; </a>
+            <a class="navbar-item" href="https://redhat-solution-patterns.github.io/solution-patterns/patterns.html" target="_blank">Solution Patterns </a>
+            <a class="navbar-item" href="https://validatedpatterns.io/" target="_blank">Validated Patterns&nbsp;</a>
+            <a class="navbar-item" href="https://catalog.redhat.com/solutions" target="_blank">Ecosystem Solutions&nbsp;</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#" style="color: white">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" target="_blank" href="https://developers.redhat.com">Red Hat Developers</a>
+            <a class="navbar-item" target="_blank" href="https://developers.redhat.com/app-dev-platform">App Dev Platform</a>
+            <a class="navbar-item" target="_blank" href="https://www.redhat.com/en/products/application-foundations">Red Hat Application Services</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" target="_blank" href="https://developers.redhat.com">Red Hat Developers</a>
+        <a class="navbar-item" target="_blank"
+          href="https://github.com/redhat-solution-patterns/redhat-solution-patterns.github.io/issues">Feedback</a>
+        
+      </div>
+    </div>
+  </nav>
+</header><div class="body">
+<div class="nav-container" data-component="patterns" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html" class=" query-params-link">Red Hat Solution Patterns</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">An Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="patterns.html">Explore Solution Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="contributors-guide.html">Contributor&#8217;s guide</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="contributors-faq.html">Frequently Asked Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="creating-solution-pattern-website.html">Creating a new solution pattern website</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="contributors-quickstart.html">Quickstart</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="contributor-in-depth.html">In-depth guide</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat Solution Patterns</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Red Hat Solution Patterns</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Red Hat Solution Patterns</a></li>
+    <li><a href="contributors-guide.html">Contributor&#8217;s guide</a></li>
+    <li><a href="creating-solution-pattern-website.html">Creating a new solution pattern website</a></li>
+    <li><a href="appendix.html">Appendix</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/redhat-solution-patterns/redhat-solution-patterns.github.io/edit/main/documentation/modules/ROOT/pages/appendix.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Solution Patterns: Contributors Guide</h1>
+<div class="sect1">
+<h2 id="_appendix"><a class="anchor" href="#_appendix"></a>Appendix</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_additional_installation_information"><a class="anchor" href="#_additional_installation_information"></a>Additional installation information</h3>
+<div class="sect3">
+<h4 id="_node_js"><a class="anchor" href="#_node_js"></a>Node.js</h4>
+<div class="paragraph">
+<p>In this guide, we&#8217;ll be installing Node.js 18.</p>
+</div>
+<div class="paragraph">
+<p>While you can install Node.js from the official packages, we strongly recommend that you use nvm (Node Version Manager) to manage your Node.js installation(s).
+Follow the nvm installation instructions to set up nvm on your machine.</p>
+</div>
+<div class="paragraph">
+<p>Once you&#8217;ve installed nvm, open a new terminal and install Node.js 18 using the following command:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ nvm install 18</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can switch to this version of Node.js at any time using the following command:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ nvm use 18</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To make Node.js 10 the default in new terminals, type:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ nvm alias default 18</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now that you have Node.js installed, you can proceed with installing the Gulp CLI.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_gulp"><a class="anchor" href="#_gulp"></a>Gulp</h4>
+<div class="paragraph">
+<p>You&#8217;ll need the Gulp command-line interface (CLI) to run the build.
+The Gulp CLI package provides the <code>gulp</code> command which, in turn, executes the version of Gulp declared by the project.</p>
+</div>
+<div class="paragraph">
+<p>You should install the Gulp CLI globally (which resolves to a location in your user directory if you&#8217;re using nvm) using the following command:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ npm install -g gulp-cli</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Verify the Gulp CLI is installed and on your PATH by running:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ gulp --version</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now that you have the prerequisites installed, you can fetch and build the UI project.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_about_the_solution_pattern_site_template"><a class="anchor" href="#_about_the_solution_pattern_site_template"></a>About the Solution Pattern Site Template</h3>
+<div class="paragraph">
+<p>The template is available at: <a href="https://github.com/redhat-solution-patterns/solution-pattern-website-template" class="bare">https://github.com/redhat-solution-patterns/solution-pattern-website-template</a>.</p>
+</div>
+<div class="paragraph">
+<p>This strategy benefits content writers by:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Allowing for a simple projects creation flow: a couple of clicks and it&#8217;s done;</p>
+</li>
+<li>
+<p>Providing, for free, a compatible look and feel with other <a href="https://redhat-solution-patterns.github.io/">existing solution patterns</a>;</p>
+</li>
+<li>
+<p>Recommended high-level page structure, sections, and navigation menu, providing readers a similar experience across different solution patterns;</p>
+</li>
+<li>
+<p>Several documentation code samples that show useful features available;</p>
+</li>
+<li>
+<p>Allowing focus on what matters - the content. Using Asciidoc, there&#8217;s no need to spend extra hours on CSS customization for page and text formatting.</p>
+</li>
+<li>
+<p>Bringing a ready-to-use deployment pipeline (<a href="https://github.com/redhat-solution-patterns/solution-pattern-website-template/blob/main/.github/workflows/docs.yml">GitHub action</a>) that builds and publishes the project website.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The solution pattern&#8217;s template is derived from the <a href="https://github.com/redhat-scholars/courseware-template">Red Hat Scholars courseware template</a>, with extra customization:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>UI: The pages are customized to represent the goals of the Red Hat Solution Pattern projects. The forked projects and changes are available at: <a href="https://github.com/redhat-scholars/course-ui" class="bare">https://github.com/redhat-scholars/course-ui</a></p>
+</li>
+<li>
+<p>Content recommendation: out-of-the-box configuration, content and structure that matches the target objectives of a solution pattern documentation.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="highlights"><a class="anchor" href="#highlights"></a>Documentation components highlights</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Admonitions</dt>
+<dd>
+<p>Use <code>NOTE</code>,<code>TIP</code>,<code>IMPORTANT</code>,<code>CAUTION</code> or <code>WARNING</code> to create nice admonition blocks.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">[NOTE] This is nice admonition block for a note.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>More details on how to use: <a href="https://docs.asciidoctor.org/asciidoc/latest/blocks/admonitions/">AsciiDoctor Admonitions</a>.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Information below is part of <a href="https://redhat-scholars.github.io/build-course/rhs-build-course/index.html" target="_blank" rel="noopener">Writing a RedHat scholar Course</a>, by Red Hat Developers.
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Copy-Pasteable Code</dt>
+<dd>
+<p>To have your code/commands easily copied and pasted, you can use the special styling <code>.console-input</code> on the AsciiDoc source blocks. That should enables clipboard for the source block.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">[.console-input]
+[source,adoc]
+----
+kubectl get pods
+----</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output result of the above code is:</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">kubectl get pods</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Console Output</dt>
+<dd>
+<div class="paragraph">
+<p>As you have commands that gets executed, you may wish to show the out of the command. Like adding special style source block for console input, you can add similar style like <code>.console-output</code> to the source block.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">[.console-input]
+[source,adoc]
+----
+echo "Hello World!"
+----</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output result of the above code is:</p>
+</div>
+<div class="listingblock console-output">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Hello World!</code></pre>
+</div>
+</div>
+</dd>
+<dt class="hdlist1">Tabs</dt>
+<dd>
+<div class="paragraph">
+<p>Another resource you can use are <strong>Tabs</strong>. To do so, use the <code>[tabs]</code> macro as shown below:</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-adoc hljs" data-lang="adoc">[tabs]
+====
+one::
++
+--
+--
+two::
++
+--
+--
+====</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output result of the above code is:</p>
+</div>
+<div class="tabset is-loading">
+<div class="ulist tabs">
+<ul>
+<li>
+<p><a id="tabset1_one"></a>One</p>
+</li>
+<li>
+<p><a id="tabset1_two"></a>Two</p>
+</li>
+</ul>
+</div>
+<div class="content">
+<div class="tab-pane" aria-labelledby="tabset1_one">
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">echo Hello World!</code></pre>
+</div>
+</div>
+</div>
+<div class="tab-pane" aria-labelledby="tabset1_two">
+<div class="listingblock console-output">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Hello World!</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  
+</footer><script src="../_/js/vendor/clipboard.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Solution Patterns: Contributors Guide :: Solution Patterns for Cloud Native Architectures</title>
+    <link rel="canonical" href="https://redhat-solution-patterns.github.io/patterns/contributors-faq.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../_/css/site.css">
+<link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0X54HQY5H8"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0X54HQY5H8');
+</script>
+
+<style>
+  .container {
+  margin-right: auto;
+  margin-left: auto;
+  
+  }
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+  word-wrap: break-word;
+  color: rgb(33, 37, 41) !important;
+  font-weight:normal; text-decoration:none !important;
+
+}
+
+a #card {
+  
+    
+
+}
+
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+  
+}
+
+.badge {
+  background-color: grey;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 10px;
+  
+}
+
+.container .col {
+  margin: 15px !important;
+  padding: 15px !important;
+  background-color rgb(255, 255, 255)
+  box-shadow rgba(3, 3, 3, 0.12) 0px 4px 8px 0px, rgba(3, 3, 3, 0.06) 0px 0px 4px 0px
+  box-sizing border-box
+  color rgb(21, 21, 21)
+  word-wrap: break-word;
+  height: 10em !important;
+
+  
+
+}
+
+.container .col p {
+  
+}
+
+
+/* 2 columns (600px) */
+
+@media only screen and (min-width:600px) {
+  .container .col {
+    float: left;
+    width: 50%;
+  }
+}
+
+
+/* 3 columns (768px) */
+
+@media only screen and (min-width:768px) {
+  .container .col {
+    width: 33.333%;
+  }
+}
+
+
+/* 4 columns (992px) */
+
+@media only screen and (min-width:992px) {
+  .container .col {
+    width: 33%;
+  }
+}
+</style>  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://redhat-solution-patterns.github.io/" target="_blank"><img
+          src="../_/img/logo.png" height="40px" alt="Cloud Native Architecture Solution Patterns"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white"
+        href="https://redhat-solution-patterns.github.io">Solution Patterns for Cloud Native Architectures</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#" style="color: white">Architectures & Patterns</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://www.redhat.com/architect/portfolio/" target="_blank">Portfolio Architecture&nbsp; </a>
+            <a class="navbar-item" href="https://redhat-solution-patterns.github.io/solution-patterns/patterns.html" target="_blank">Solution Patterns </a>
+            <a class="navbar-item" href="https://validatedpatterns.io/" target="_blank">Validated Patterns&nbsp;</a>
+            <a class="navbar-item" href="https://catalog.redhat.com/solutions" target="_blank">Ecosystem Solutions&nbsp;</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#" style="color: white">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" target="_blank" href="https://developers.redhat.com">Red Hat Developers</a>
+            <a class="navbar-item" target="_blank" href="https://developers.redhat.com/app-dev-platform">App Dev Platform</a>
+            <a class="navbar-item" target="_blank" href="https://www.redhat.com/en/products/application-foundations">Red Hat Application Services</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" target="_blank" href="https://developers.redhat.com">Red Hat Developers</a>
+        <a class="navbar-item" target="_blank"
+          href="https://github.com/redhat-solution-patterns/redhat-solution-patterns.github.io/issues">Feedback</a>
+        
+      </div>
+    </div>
+  </nav>
+</header><div class="body">
+<div class="nav-container" data-component="patterns" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html" class=" query-params-link">Red Hat Solution Patterns</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">An Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="patterns.html">Explore Solution Patterns</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="contributors-guide.html">Contributor&#8217;s guide</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="contributors-faq.html">Frequently Asked Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="creating-solution-pattern-website.html">Creating a new solution pattern website</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="contributors-quickstart.html">Quickstart</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="contributor-in-depth.html">In-depth guide</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat Solution Patterns</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Red Hat Solution Patterns</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Red Hat Solution Patterns</a></li>
+    <li><a href="contributors-guide.html">Contributor&#8217;s guide</a></li>
+    <li><a href="contributors-faq.html">Frequently Asked Questions</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/redhat-solution-patterns/redhat-solution-patterns.github.io/edit/main/documentation/modules/ROOT/pages/contributors-faq.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Solution Patterns: Contributors Guide</h1>
+<div class="sect1">
+<h2 id="_frequently_asked_questions"><a class="anchor" href="#_frequently_asked_questions"></a>Frequently Asked Questions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Check the contributors' frequently asked questions below:</p>
+</div>
+<!-- toc disabled -->
+</div>
+</div>
+<div class="sect1">
+<h2>What are solution patterns for cloud native architecture?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It&#8217;s a resourceful set of information about an opinionated reference architecture that addresses one or more scenarios and challenges faced by developers and architects.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2>What is part of a solution pattern?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See the key assets that initially composes a solution pattern:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Architectural representation of the solution (preferably with <a href="https://c4model.com/">C4 Model</a>);</p>
+</li>
+<li>
+<p>Reproducible implementation of the architectural solution;</p>
+</li>
+<li>
+<p>Open documentation through a website (for more information check: <a href="creating-solution-pattern-website.html" class="xref page">Solution Patterns: Contributors Guide</a>);</p>
+</li>
+<li>
+<p>Potential use cases and objectives;</p>
+</li>
+<li>
+<p>Architecture technical explanation;</p>
+</li>
+<li>
+<p>Implementation (demo) explanation and details;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2>Who can contribute?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The solution patterns are open source under the apache license and everyone is welcome to contribute by sending fixes, enhancements and creating new solutions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2>How to contribute?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These are some ways you can contribute to the architectural solution patterns for cloud native apps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Report issues via GitHub;</p>
+</li>
+<li>
+<p>Send pull requests to fix open issues or enhance existing content and demos;</p>
+</li>
+<li>
+<p>Create new solution patterns and submit via pull request;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2>Who are the people behind the solution patterns?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The content shared with all the community of developers and architects are mostly brought and backed by Red Hat experienced professionals. We welcome external contributors as welcome as well.</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  
+</footer><script src="../_/js/vendor/clipboard.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
