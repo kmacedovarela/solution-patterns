@@ -4,7 +4,7 @@ runtime:
 site:
   title: Solution Patterns from Red Hat
   url: http://localhost:3000/rhs-build-course/index.html
-  start_page: patterns::index.adoc
+  start_page: patterns::contributors-guide.adoc
 
 content:
   sources:

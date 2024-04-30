@@ -4,7 +4,7 @@ runtime:
 site:
   title: Solution Patterns from Red Hat
   url: https://redhat-solution-patterns.github.io/
-  start_page: index.adoc
+  start_page: contributors-guide.adoc
 
 content:
   sources:
