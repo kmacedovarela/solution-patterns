@@ -52,3 +52,7 @@ npx gulp
 * Get familiar with  xref::contributor-in-depth.adoc#structure[the project's structure].
 * Know the available capabilities xref::contributor-in-depth.adoc#_language_and_components[to complete your document].
 * Learn how to xref::contributor-in-depth.adoc#_4_publish[publish the pattern] as a github page.
+
+== 4. Let us know when you are ready
+
+* Once you are ready with your contribution, you can let us know by filling out this form: https://github.com/redhat-solution-patterns/redhat-solution-patterns.github.io/issues/new?template=contributions.md
